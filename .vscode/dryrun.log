@@ -1,0 +1,9 @@
+make --dry-run --keep-going --print-directory
+make: Entering directory '/home/user42/Documents/so_long'
+make -C ./libft
+make[1]: Entering directory '/home/user42/Documents/so_long/libft'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/home/user42/Documents/so_long/libft'
+gcc obj/src/so_long.o obj/src/generate_map.o obj/utils/map_check.o obj/utils/map_read.o obj/utils/error.o obj/gnl/get_next_line.o obj/gnl/get_next_line_utils.o -lmlx -lXext -lX11 -g ./libft/libft.a -o so_long
+make: Leaving directory '/home/user42/Documents/so_long'
+ 

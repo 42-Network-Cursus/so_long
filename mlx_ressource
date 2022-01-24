@@ -1,0 +1,74 @@
+int	key_hook(int keycode, t_data *var)
+{
+	if (keycode == 65362 || keycode == 119) // UP
+	{
+			var->y -= 10;
+		mlx_clear_window(var->mlx, var->win);
+		create_frame(var);
+	}
+	if (keycode == 65363 || keycode == 100) // RIGHT
+	{
+		var->x += 10;
+		mlx_clear_window(var->mlx, var->win);
+		create_frame(var);
+	}
+	if (keycode == 65364 || keycode == 115) // DOWN
+	{
+		var->y += 10;
+		mlx_clear_window(var->mlx, var->win);
+		create_frame(var);
+	}
+	if (keycode == 65361 || keycode == 97) // LEFT
+	{
+		//if (var->x > 0)
+			var->x -= 10;
+		mlx_clear_window(var->mlx, var->win);
+		create_frame(var);
+	}
+
+	if (keycode == 65307)
+		close_win(var);	
+}
+
+int	create_frame(t_data *var)
+{
+	int x;
+	int y;
+
+	x = 0;
+	y = 0;
+
+	var->img = mlx_new_image(var->mlx, 100, 100);
+	var->addr = mlx_get_data_addr(var->img, &var->bpp, &var->ll, &var->endian);
+	while (x < 100)
+	{
+		y = 0;
+		while (y < 100)
+		{
+			my_mlx_pixel_put(var, x, y, 0x00FFC0CB);
+			y++;
+		}
+		x++;
+	}
+	mlx_put_image_to_window(var->mlx, var->win, var->img, var->x, var->y);
+}
+
+
+
+// Creating img -In progress
+//	var.img = mlx_new_image(var.mlx, 100, 100);
+	var.addr = mlx_get_data_addr(var.img, &var.bpp, &var.ll, &var.endian);
+//	my_mlx_pixel_put(&var, 0, 0, 0x00FF0000);
+	while (var.x < 1000)
+	{
+		mlx_put_image_to_window(var.mlx, var.win, var.img, var.x, var.y);
+		var.x += 32;
+	}
+
+    void	my_mlx_pixel_put(t_data *data, int x, int y, int color)
+{
+	char	*dst;
+
+	dst = data->addr + (y * data->ll + x * (data->bpp / 8));
+	*(unsigned int*)dst = color;
+}
