@@ -18,3 +18,24 @@ void	error(char *msg, t_data *var)
 	printf("%s\n", msg);
 	exit(EXIT_SUCCESS);
 }
+
+int	close_win(t_data *var)
+{
+	mlx_clear_window(var->mlx, var->win);
+	mlx_destroy_window(var->mlx, var->win);
+	mlx_destroy_display(var->mlx);
+	free(var->mlx);
+	map_free(var->map);
+	exit(1);
+}
+
+int 	error_win(t_data *var, int n)
+{
+	close_win(var);
+	printf("Error.\n");
+	if (n == 1)
+		printf("Mlx initialization failed.\n");
+	if (n == 2)
+		printf("Window initialization failed.\n");
+	return (1);
+}

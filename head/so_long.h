@@ -15,11 +15,9 @@
 #include <string.h>
 
 #define WALL "img/xpm/wall.xpm"
-#define	CHAR "img/xpm/char.xpm"
+#define	PLAYER "img/xpm/player.xpm"
 #define COLLECTIBLE "img/xpm/collectible.xpm"
-#define COLLECTED "img/xpm/collected.xpm"
 #define EXIT "img/xpm/exit.xpm"
-#define FLOOR "img/xpm/floor.xpm"
 
 #define HEIGHT 1080
 #define WIDTH 1920
@@ -33,27 +31,35 @@ typedef struct	s_data
 	char	**map;
 	int		player_x;
 	int		player_y;
+	int		moves;
 
 	int	p; // player
 	int	c; // collectible
 	int	e; // exit
 }				t_data;
 
-/*
+
 typedef struct	s_asset
 {
 	int h; // height
 	int w; // width
 }				t_asset;
-*/
 
-// Src
+// src
 void    map_check(t_data *var);
 char    *map_read(char *map_path);
 int		generate_map(t_data *var);
 
-// Utils
+// moves
+int		move_up(t_data *var);
+int		move_down(t_data *var);
+int		move_left(t_data *var);
+int		move_right(t_data *var);
+
+// utils
 void    error(char	*msg, t_data *var);
+int		close_win(t_data *var);
+int 	error_win(t_data *var, int n);
 void	map_free(char **map);
 
 #endif

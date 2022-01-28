@@ -2,21 +2,21 @@
 
 static void	put_wall(t_data *var, t_asset size, int x, int y)
 {
-	var->img  = mlx_xpm_file_to_image(var->mlx, "img/xpm/wall.xpm", &size.h, &size.w);
+	var->img  = mlx_xpm_file_to_image(var->mlx, WALL, &size.h, &size.w);
 	mlx_put_image_to_window(var->mlx, var->win, var->img, x, y);
 	mlx_destroy_image(var->mlx, var->img);
 }
 
 static void	put_player(t_data *var, t_asset size, int x, int y)
 {
-	var->img  = mlx_xpm_file_to_image(var->mlx, "img/xpm/player.xpm", &size.h, &size.w);
+	var->img  = mlx_xpm_file_to_image(var->mlx, PLAYER, &size.h, &size.w);
 	mlx_put_image_to_window(var->mlx, var->win, var->img, x, y);
 	mlx_destroy_image(var->mlx, var->img);
 }
 
 static void	put_exit(t_data *var, t_asset size, int x, int y)
 {
-	var->img  = mlx_xpm_file_to_image(var->mlx, "img/xpm/exit.xpm", &size.h, &size.w);
+	var->img  = mlx_xpm_file_to_image(var->mlx, EXIT, &size.h, &size.w);
 	mlx_put_image_to_window(var->mlx, var->win, var->img, x, y);
 	mlx_destroy_image(var->mlx, var->img);
 
@@ -24,7 +24,7 @@ static void	put_exit(t_data *var, t_asset size, int x, int y)
 
 static void	put_collectible(t_data *var, t_asset size, int x, int y)
 {
-	var->img  = mlx_xpm_file_to_image(var->mlx, "img/xpm/collectible.xpm", &size.h, &size.w);
+	var->img  = mlx_xpm_file_to_image(var->mlx, COLLECTIBLE, &size.h, &size.w);
 	mlx_put_image_to_window(var->mlx, var->win, var->img, x, y);
 	mlx_destroy_image(var->mlx, var->img);
 }
