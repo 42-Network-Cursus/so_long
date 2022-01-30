@@ -21,7 +21,6 @@ static char	*map_gnl(int fd)
 	return (ret);
 }
 
-
 static int	extension_check(char *map_path)
 {
 	char	*ext;
@@ -36,9 +35,9 @@ static int	extension_check(char *map_path)
 	return (ret);
 }
 
-char    *map_read(char *map_path)
+char	*map_read(char *map_path)
 {
-	int     fd;
+	int		fd;
 	char	*map;
 
 	if (!map_path)

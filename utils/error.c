@@ -2,7 +2,7 @@
 
 void	map_free(char **map)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (map[i])
@@ -29,7 +29,7 @@ int	close_win(t_data *var)
 	exit(1);
 }
 
-int 	error_win(t_data *var, int n)
+int	error_win(t_data *var, int n)
 {
 	close_win(var);
 	printf("Error.\n");

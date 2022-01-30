@@ -16,7 +16,7 @@
 # include <stdlib.h>
 # include <unistd.h>
 
-# define	MAX_LONG 9223372036854775807
+# define MAX_LONG 9223372036854775807
 
 typedef struct s_list
 {

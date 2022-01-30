@@ -33,7 +33,7 @@ int	move_down(t_data *var)
 	int		x;
 	int		y;
 	char	tmp;
-	
+
 	x = var->player_x;
 	y = var->player_y;
 	tmp = var->map[y][x];
@@ -89,7 +89,7 @@ int	move_right(t_data *var)
 	int		x;
 	int		y;
 	char	tmp;
-	
+
 	x = var->player_x;
 	y = var->player_y;
 	tmp = var->map[y][x];
