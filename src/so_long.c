@@ -6,7 +6,7 @@
 /*   By: cwastche <cwastche@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/30 22:22:09 by cwastche          #+#    #+#             */
-/*   Updated: 2022/01/30 22:22:36 by cwastche         ###   ########.fr       */
+/*   Updated: 2022/02/01 22:32:09 by cwastche         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,8 @@ int	main(int ac, char **av)
 	var.moves = 1;
 	line = map_read(av[1]);
 	var.map = ft_split(line, '\n');
+	if (!var.map)
+		return (0);
 	free(line);
 	map_check(&var);
 	var.mlx = mlx_init();
