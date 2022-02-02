@@ -6,7 +6,7 @@
 /*   By: cwastche <cwastche@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/30 22:21:18 by cwastche          #+#    #+#             */
-/*   Updated: 2022/02/02 22:34:53 by cwastche         ###   ########.fr       */
+/*   Updated: 2022/02/02 23:29:37 by cwastche         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@
 
 # define WALL "img/wall.xpm"
 # define PLAYER "img/player.xpm"
-# define COLLECTIBLE "img/collectible.xpm"
+# define COLLECT "img/collectible.xpm"
 # define EXIT "img/exit.xpm"
 # define FLOOR "img/floor.xpm"
 
