@@ -6,7 +6,7 @@
 /*   By: cwastche <cwastche@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/30 22:22:12 by cwastche          #+#    #+#             */
-/*   Updated: 2022/01/30 22:22:35 by cwastche         ###   ########.fr       */
+/*   Updated: 2022/02/02 09:54:02 by cwastche         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ void	error(char *msg, t_data *var)
 
 int	close_win(t_data *var)
 {
-	mlx_clear_window(var->mlx, var->win);
+//	mlx_clear_window(var->mlx, var->win);
 	mlx_destroy_window(var->mlx, var->win);
 	mlx_destroy_display(var->mlx);
 	free(var->mlx);
