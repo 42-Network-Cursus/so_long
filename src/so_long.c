@@ -6,7 +6,7 @@
 /*   By: cwastche <cwastche@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/30 22:22:09 by cwastche          #+#    #+#             */
-/*   Updated: 2022/02/04 09:12:09 by cwastche         ###   ########.fr       */
+/*   Updated: 2022/02/04 09:25:13 by cwastche         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ int	main(int ac, char **av)
 	var.mlx = mlx_init();
 	if (var.mlx == NULL)
 		return (error_win(&var, 1));
-	var.win = mlx_new_window(var.mlx, var.map_w * 80, var.map_h * 80, "Cwastche's So_long");
+	var.win = mlx_new_window(var.mlx, var.map_w, var.map_h, "So_long");
 	if (var.win == NULL)
 		return (error_win(&var, 2));
 	mlx_key_hook(var.win, key_hook, &var);

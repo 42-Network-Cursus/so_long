@@ -6,7 +6,7 @@
 /*   By: cwastche <cwastche@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/30 22:22:12 by cwastche          #+#    #+#             */
-/*   Updated: 2022/02/04 09:18:48 by cwastche         ###   ########.fr       */
+/*   Updated: 2022/02/04 09:25:44 by cwastche         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,13 @@
 
 void	map_size(t_data *var)
 {
-	int y;
+	int	y;
 
-	var->map_w = ft_strlen(var->map[0]);
+	var->map_w = ft_strlen(var->map[0]) * 80;
 	var->map_h = 0;
 	while (var->map[y++])
 		var->map_h += 1;
+	var->map_h *= 80;
 }
 
 void	map_free(char **map)
