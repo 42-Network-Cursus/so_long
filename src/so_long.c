@@ -6,7 +6,7 @@
 /*   By: cwastche <cwastche@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/30 22:22:09 by cwastche          #+#    #+#             */
-/*   Updated: 2022/02/04 09:25:13 by cwastche         ###   ########.fr       */
+/*   Updated: 2022/02/04 11:06:29 by cwastche         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ int	main(int ac, char **av)
 	line = map_read(av[1]);
 	var.map = ft_split(line, '\n');
 	if (!var.map)
-		return (0);
+		return (printf("Error.\nGiven map is empty.\n"));
 	free(line);
 	map_check(&var);
 	map_size(&var);
