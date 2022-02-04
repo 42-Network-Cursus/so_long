@@ -6,7 +6,7 @@
 #    By: cwastche <cwastche@student.s19.be>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/30 22:22:24 by cwastche          #+#    #+#              #
-#    Updated: 2022/01/30 22:22:30 by cwastche         ###   ########.fr        #
+#    Updated: 2022/02/04 09:19:07 by cwastche         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ CFLAG	=	-Wall -Wextra -Werror
 MLXFLAG =	-lmlx -lXext -lX11
 
 SRC		=	src/so_long.c src/generate_map.c src/map_check.c src/map_read.c\
-			utils/error.c utils/moves.c\
+			utils/utils.c utils/moves.c\
 			gnl/get_next_line.c gnl/get_next_line_utils.c
 
 OBJ_DIR =	obj

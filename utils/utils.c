@@ -6,11 +6,21 @@
 /*   By: cwastche <cwastche@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/30 22:22:12 by cwastche          #+#    #+#             */
-/*   Updated: 2022/02/02 23:06:39 by cwastche         ###   ########.fr       */
+/*   Updated: 2022/02/04 09:18:48 by cwastche         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../head/so_long.h"
+
+void	map_size(t_data *var)
+{
+	int y;
+
+	var->map_w = ft_strlen(var->map[0]);
+	var->map_h = 0;
+	while (var->map[y++])
+		var->map_h += 1;
+}
 
 void	map_free(char **map)
 {

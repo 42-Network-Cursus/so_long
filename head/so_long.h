@@ -6,7 +6,7 @@
 /*   By: cwastche <cwastche@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/30 22:21:18 by cwastche          #+#    #+#             */
-/*   Updated: 2022/02/02 23:29:37 by cwastche         ###   ########.fr       */
+/*   Updated: 2022/02/04 09:19:32 by cwastche         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,9 +32,6 @@
 # define EXIT "img/exit.xpm"
 # define FLOOR "img/floor.xpm"
 
-# define HEIGHT 1080
-# define WIDTH 1920
-
 typedef struct s_data
 {
 	void	*mlx;
@@ -45,6 +42,9 @@ typedef struct s_data
 	int		player_x;
 	int		player_y;
 	int		moves;
+
+	int		map_h;
+	int		map_w;
 
 	int		p;
 	int		c;
@@ -73,5 +73,6 @@ void	error(char	*msg, t_data *var);
 int		close_win(t_data *var);
 int		error_win(t_data *var, int n);
 void	map_free(char **map);
+void	map_size(t_data *var);
 
 #endif
